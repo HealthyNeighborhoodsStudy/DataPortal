@@ -299,29 +299,55 @@ body =  dashboardBody(
     )
     
     # about resources -------------------------------------
-    ,tabItem(tabName = "about_resources"
-             ,h1(strong("About: Resources"))
-             # ,style = "font-weight: 1500; color: #3c8dbc;"
-             
-             ,h3(tags$u(strong("Publications",style = "font-weight: 1500; color: #3c8dbc;")))
-             ,p(tags$div(tags$ul(tags$li(a(href="https://www.clf.org/wp-content/uploads/2019/05/HNEF-Report-FINAL-FOR-PRINT.pdf","Healthy Neighborhoods Research Study Indicators Report, 2016")))))
-             ,p(tags$div(tags$ul(tags$li(a(href="https://pubmed.ncbi.nlm.nih.gov/30015179/","Community Change and Resident Needs: Designing a Participatory Action Research Study in Metropolitan Boston")))))
-             ,p(tags$div(tags$ul(tags$li(a(href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6388393/","Designing and Facilitating Collaborative Research Design and Data Analysis Workshops: Lessons Learned in the Healthy Neighborhoods Study"))))
-                ,p(tags$div(tags$ul(tags$li(a(href="http://www.mapc.org/wp-content/uploads/2017/11/HNEF-HIA-Report-v5_0.pdf","Tranist-Oriented Development and Health: A Health Impact Assessment to Inform the Healthy Neighborhoods Equity Fund")))))
-                
-                ,h5(tags$u(strong("Neighborhood Effects Resources",style = "font-weight: 1500; color: #222d32;")))
-                ,p(tags$div(tags$ul(tags$li(a(href="https://pubmed.ncbi.nlm.nih.gov/27637089/","Research on neighborhood effects on health in the United States: A systematic review of study characteristics")))))
-                ,p(tags$div(tags$ul(tags$li(a(href="https://www.clf.org/covid-19-and-healthy-neighborhoods-study-communities/", "COVID-19 and the Healthy Neighborhoods Study Communities")))))
-                
-                ,h3(tags$u(strong("Downloadable Data & Resources",style = "font-weight: 1500; color: #3c8dbc;")))
-                ,p(tags$div(tags$ul(tags$li(a(href="https://docs.google.com/spreadsheets/d/1sXBWt9716b6CF2p3KjQ2YW3xv_ki7700pj8eSOV_ZHs/edit?usp=sharing", "Data Dictionary"), " - The information manuel that defines and explains each of the variables used in the dashboard."))))
-                ,p(tags$div(tags$ul(tags$li(a(href="https://drive.google.com/drive/folders/1dP60iWyb4ZRaWY--QXU4WntHaldamN6f?usp=sharing", "Paper Surveys by Year"), " - The folder containing the every version of the Healthy Neighborhoods Study survey that was used in data collection."))))
-                ,p(tags$div(tags$ul(tags$li(a(href="https://drive.google.com/file/d/1ARFTD4DrXHWBdSqJKIDFIHUx_xCZWkhk/view?usp=sharing", "Public-use Dataset"), " - The spreadsheet containing all of the data used in the Dashboard"))))
-                
-                ,h3(tags$u(strong("Contact Us",style = "font-weight: 1500; color: #3c8dbc;")))
-                ,tags$div(tags$ul(tags$li(tags$u("Email"), "- rgibson@clf.org")))
-             ))
+
     
+  ,tabItem(tabName = "about_resources"
+           ,h1(strong("About: Resources"))
+
+           ,h3(tags$u(strong("Publications",style = "font-weight: 1500; color: #3c8dbc;")))
+           
+           
+           ,h5(tags$u(strong("Peer Reviewed Journals",style = "font-weight: 1500; color: #222d32;")))
+           
+           ,p(tags$div(tags$ul(tags$li(a(href="https://doi.org/10.1080/23748834.2021.1885250"
+                                         ,"2021: 'It feels like money's just flying out the window': financial security, stress and health in gentrifying neighborhoods")))))
+           ,p(tags$div(tags$ul(tags$li(a(href="https://doi.org/10.1016/j.socscimed.2020.113290"
+                                         ,"2020: Rising home values and Covid-19 case rates in Massachusetts")))))
+           
+           ,p(tags$div(tags$ul(tags$li(a(href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6388393/"
+                                         ,"2019: Designing and Facilitating Collaborative Research Design and Data Analysis Workshops: Lessons Learned in the Healthy Neighborhoods Study"))))
+           ,p(tags$div(tags$ul(tags$li(a(href="https://pubmed.ncbi.nlm.nih.gov/30015179/"
+                                         ,"2018: Community Change and Resident Needs: Designing a Participatory Action Research Study in Metropolitan Boston")))))
+           
+           ,p(tags$div(tags$ul(tags$li(a(href="https://pubmed.ncbi.nlm.nih.gov/27637089/"
+                                         ,"2016: Research on neighborhood effects on health in the United States: A systematic review of study characteristics")))))
+              
+              
+              
+            ,h5(tags$u(strong("Reports and Field guides",style = "font-weight: 1500; color: #222d32;")))
+              
+               ,p(tags$div(tags$ul(tags$li(a(href="chrome-extension://oemmndcbldboiebfnladdacbdfmadadm/https://www.clf.org/wp-content/uploads/2021/01/PAR-Field-Guide.pdf"
+                                           , "2020: A Participatory Action Research Field Guide")))))
+               ,p(tags$div(tags$ul(tags$li(a(href="https://www.clf.org/covid-19-and-healthy-neighborhoods-study-communities/"
+                                             , "2020: COVID-19 and the Healthy Neighborhoods Study Communities")))))
+               ,p(tags$div(tags$ul(tags$li(a(href="https://www.clf.org/wp-content/uploads/2019/05/HNEF-Report-FINAL-FOR-PRINT.pdf"
+                                                ,"2016: Healthy Neighborhoods Research Study Indicators Report")))))
+               ,p(tags$div(tags$ul(tags$li(a(href="http://www.mapc.org/wp-content/uploads/2017/11/HNEF-HIA-Report-v5_0.pdf"
+                                         ,"2013: Tranist-Oriented Development and Health: A Health Impact Assessment to Inform the Healthy Neighborhoods Equity Fund")))))             
+           
+           
+           ,h3(tags$u(strong("Downloadable Data & Resources",style = "font-weight: 1500; color: #3c8dbc;")))
+              
+               ,p(tags$div(tags$ul(tags$li(a(href="https://docs.google.com/spreadsheets/d/1sXBWt9716b6CF2p3KjQ2YW3xv_ki7700pj8eSOV_ZHs/edit?usp=sharing", "Data Dictionary")
+                                          , " - The information manuel that defines and explains each of the variables used in the dashboard."))))
+               ,p(tags$div(tags$ul(tags$li(a(href="https://drive.google.com/drive/folders/1dP60iWyb4ZRaWY--QXU4WntHaldamN6f?usp=sharing"
+                                             , "Paper Surveys by Year"), " - The folder containing the every version of the Healthy Neighborhoods Study survey that was used in data collection."))))
+               ,p(tags$div(tags$ul(tags$li(a(href="https://drive.google.com/file/d/1ARFTD4DrXHWBdSqJKIDFIHUx_xCZWkhk/view?usp=sharing"
+                                            , "Public-use Dataset"), " - The spreadsheet containing all of the data used in the Dashboard"))))
+              
+            ,h3(tags$u(strong("Contact Us",style = "font-weight: 1500; color: #3c8dbc;")))
+              ,tags$div(tags$ul(tags$li(tags$u("Email"), "- rgibson@clf.org")))
+           ))
     
     
     #---------------------------------------------------------------------------------------------------------------------------    
