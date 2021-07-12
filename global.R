@@ -19,10 +19,6 @@ library("gmodels")
 library("unikn")
 library("ggrepel")
 library("ggpubr")
-# Initial set up: wrap master dataset in readable .rds file -------------------------------------------------------------------------------
-# load("C:/Users/Yael nidam/Dropbox (MIT)/HNS interviews-secure/HNS_Resource_Library/04.HNS_surveys_master/2.survey_cleaning_script/output/2020-08-12HNS_Surveys_Public.RData")
-# hns_survey = dat_public
-# saveRDS(list("all"=hns_survey), "hns_survey.Rds")
 
 #Load data    ----------------------------------------------------
 all=readRDS("hns_survey.Rds")
@@ -228,40 +224,7 @@ cross_table_mean_graph=function(dat,q2,q22,var_name2,var_name22){#Assuming q2 is
                     , yaxis = list(title = "")
   )
   return(g)}
-# cross_table_mean_graph(hns_survey,"mentalhealthscore","gender","Mental","Gender")
-# pie plot---------------------------------------------------
-# pie =function(dat,q2,q22,pie_title){
-#   
-#   data=dat_subset(dat,q2,q22)%>%droplevels()
-#   # dplyr::filter( !((eval(as.symbol(q2))) == "" | is.na(eval(as.symbol(q2)))))%>%
-#   t=table(data[,q2],data[,q22])
-#   m=(melt(data = t, id.vars = q2))
-#   m_sum=as.data.frame(colSums(t))
-#   m_sum=mutate(m_sum,r=row.names(m_sum))
-#   colnames(m_sum)=c("var2_sum","Var2")
-#   
-#   m=left_join(m,m_sum,by="Var2")
-#   
-#   m$percent=round(m$value/m$var2_sum*100,1)
-#   m$percent_l=paste(as.character(m$percent),"%")
-#   
-#   t=m%>%filter(Var2==pie_title)
-#   colors=usecol(pal=pal_unikn_light ,n=nrow(t))
-#   
-#   fig <- plot_ly(t, labels = ~Var1, values = ~percent, type = 'pie', name = pie_title
-#                  ,hovertemplate = paste(t$percent_l,t$Var1 ," (",t$value,"out of",t$var2_sum," people)")
-#                  ,textposition = 'inside',
-#                  textinfo = 'Var1+percent_l',
-#                  insidetextfont = list(color = 'black'),
-#                  hoverinfo = 'text',
-#                  text = paste(t$Var1),
-#                  marker = list(colors = colors,
-#                                line = list(color = '#FFFFFF', width = 1))
-#   )
-#   fig <- fig %>% layout(title = pie_title,
-#                         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-#                         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-#   return(fig)}
+
 
 # pie plot---------------------------------------------------
 
