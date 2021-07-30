@@ -452,19 +452,8 @@ body =  dashboardBody(
                box(
                  title = "Results", width = 9, status="danger",color = "navy", solidHeader = TRUE
                  ,collapsible = TRUE
+
                  
-                 ,h4(strong("Results: Description of Chosen Question"),style = "font-weight: 1500; color: #d9534f;")
-                 ,p("This feature allows you to review the information you have chosen. The information provided includes 
-                   your chosen survey section, your chosen survey question, and the description of your chosen question" 
-                    #, and the filters you applied to your search. "
-                 )
-                 ,DT::dataTableOutput("explore_description")
-                 ,h4(strong("Results: Selected optional filters"),style = "font-weight: 1500; color: #d9534f;")
-                 ,p("The table below shows the selected optional filters. By default, all options are selected to show the maximum number of surveys. 
-                   For each filter you select, we remove surveys that do not match that filter, thus reducing the total number of surveys for your analysis.")
-                 ,DT::dataTableOutput("explore_filters")
-                 
-                 ,tags$br("")
                  ,h4(strong("Results: Summary Table"),style = "font-weight: 1500; color: #d9534f;")
                  ,p("This section provides you with information about how participants responded to your chosen survey question.
                     Specifically, you are given the number and percentage of people who selected each survey response option.")
@@ -498,6 +487,19 @@ body =  dashboardBody(
                    emerge on the bar graph providing you with the non-filtered results of your chosen survey question.")
                  
                  , plotlyOutput("graph")
+                 
+                 
+                 ,tags$br("")
+                 ,h4(strong("Results: Description of Chosen Question"),style = "font-weight: 1500; color: #d9534f;")
+                 ,p("This feature allows you to review the information you have chosen. The information provided includes 
+                    your chosen survey section, your chosen survey question, and the description of your chosen question" 
+                    #, and the filters you applied to your search. "
+                 )
+                 ,DT::dataTableOutput("explore_description")
+                 ,h4(strong("Results: Selected optional filters"),style = "font-weight: 1500; color: #d9534f;")
+                 ,p("The table below shows the selected optional filters. By default, all options are selected to show the maximum number of surveys. 
+                    For each filter you select, we remove surveys that do not match that filter, thus reducing the total number of surveys for your analysis.")
+                 ,DT::dataTableOutput("explore_filters")
                )
              )
     ),
@@ -619,18 +621,6 @@ body =  dashboardBody(
               ,box(
                 title = "Results", width = 10, status="danger", solidHeader = TRUE,collapsible = TRUE
                 
-                
-                ,h4(strong("Results: Description of Chosen Questions"),style = "font-weight: 1500; color: #d9534f;")
-                ,p("This feature allows you to review the survey questions and filters you have chosen for your analysis. 
-                   The information provided includes your chosen survey sections, your chosen survey questions, the descriptions 
-                   of each chosen question, and the filters you applied to your search.")
-                ,DT::dataTableOutput("analyze_description")
-                ,h4(strong("Results: Selected optional filters"),style = "font-weight: 1500; color: #d9534f;")
-                ,p("The table below shows the selected optional filters. By default, all options are selected to show the maximum number of surveys. 
-                   For each filter you select, we remove surveys that do not match that filter, thus reducing the total number of surveys for your analysis.")
-                ,DT::dataTableOutput("analyze_filters")
-                
-                ,h3("")
                 ,h4(strong("Results: Summary Table"),style = "font-weight: 1500; color: #d9534f;")
                 ,p("This is a cross table that shows how participants responded to both chosen questions. 
                     The rows in this table correspond to the first question you chose, and the columns correspond to the 
@@ -668,6 +658,18 @@ body =  dashboardBody(
                    to the survey response options of your second chosen question.  The Y-axis provides 
                    the mean value for your first selected question")
                 ,plotlyOutput("graph22")
+                
+                ,h3("")
+                ,h4(strong("Results: Description of Chosen Questions"),style = "font-weight: 1500; color: #d9534f;")
+                ,p("This feature allows you to review the survey questions and filters you have chosen for your analysis. 
+                   The information provided includes your chosen survey sections, your chosen survey questions, the descriptions 
+                   of each chosen question, and the filters you applied to your search.")
+                ,DT::dataTableOutput("analyze_description")
+                ,h4(strong("Results: Selected optional filters"),style = "font-weight: 1500; color: #d9534f;")
+                ,p("The table below shows the selected optional filters. By default, all options are selected to show the maximum number of surveys. 
+                   For each filter you select, we remove surveys that do not match that filter, thus reducing the total number of surveys for your analysis.")
+                ,DT::dataTableOutput("analyze_filters")
+                
                 
               )
             )
@@ -805,19 +807,7 @@ body =  dashboardBody(
                box(
                  title = "Results", width = 10, status="danger", solidHeader = TRUE,collapsible = TRUE
                  
-                 ,h4(strong("Results: Description of selected criteria"),style = "font-weight: 1500; color: #d9534f;")
-                 ,p("This feature allows you to review the information you have chosen for your analysis. 
-              The information provided includes your two chosen neighborhoods, your chosen survey section, 
-              your chosen survey question, the descriptions of your chosen question, and the filters you applied to your search. 
-              One of the neighborhood names will be highlighted in red; this will help you identify which information belongs 
-              to which neighborhood in the summary table.")
-                 ,DT::dataTableOutput("description3")
-                 ,h4(strong("Results: Selected optional filters"),style = "font-weight: 1500; color: #d9534f;")
-                 ,p("The table below shows the selected optional filters. By default, all options are selected to show the maximum number of surveys. 
-              For each filter you select, we remove surveys that do not match that filter, thus reducing the total number of surveys for your analysis.")
-                 ,DT::dataTableOutput("compare_filters")
                  
-                 ,h3("")
                  ,h4(strong("Results: Summary Table"),style = "font-weight: 1500; color: #d9534f;")
                  ,p("This is a cross table that shows how participants from each neighborhood responded to the chosen question. 
                 The rows in the table correspond to the response options of the chosen question. 
@@ -864,12 +854,25 @@ body =  dashboardBody(
                  
                  ,plotOutput("graph3")
                  
+                 ,h3("")
                  ,h4(strong("Results: Graph for selected filtered criteria (Continous)"),style = "font-weight: 1500; color: #d9534f;")
                  ,p(tags$em("Presented only if the chosen question is continous (like a score)"))                
                  ,p("This is a graph that shows how participants responded to the chosen question. The X-axis corresponds 
               to the survey response options of your second chosen question.  The Y-axis provides 
               the mean value for your selected question")
                  ,plotlyOutput("graph33")
+                 ,h4(strong("Results: Description of selected criteria"),style = "font-weight: 1500; color: #d9534f;")
+                 ,p("This feature allows you to review the information you have chosen for your analysis. 
+              The information provided includes your two chosen neighborhoods, your chosen survey section, 
+              your chosen survey question, the descriptions of your chosen question, and the filters you applied to your search. 
+              One of the neighborhood names will be highlighted in red; this will help you identify which information belongs 
+              to which neighborhood in the summary table.")
+                 ,DT::dataTableOutput("description3")
+                 ,h4(strong("Results: Selected optional filters"),style = "font-weight: 1500; color: #d9534f;")
+                 ,p("The table below shows the selected optional filters. By default, all options are selected to show the maximum number of surveys. 
+              For each filter you select, we remove surveys that do not match that filter, thus reducing the total number of surveys for your analysis.")
+                 ,DT::dataTableOutput("compare_filters")
+                 
                )
              )
     )))
